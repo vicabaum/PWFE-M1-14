@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="assets/normalize.min.css">
+		<link rel="stylesheet" href="assets/style.css">
+		<link rel="stylesheet" href="assets/extra.css">
+		<title>Aprender a programar con JavaScript</title>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<a href="ejercicio_1.html" class="active">Ejercicio 1</a>
+				<a href="ejercicio_2.html">Ejercicio 2</a>
+				<a href="ejercicio_3.html">Ejercicio 3</a>
+				<a href="ejercicio_4.html">Ejercicio 4</a>
+				<a href="ejercicio_5.html">Ejercicio 5</a>
+				<a href="ejercicio_6.html">Ejercicio 6</a>
+				<a href="ejercicio_7.html">Ejercicio 7</a>
+			</nav>
+		</header>
+
+		<section>
+			<h1>Aprender a programar con JavaScript</h1>
+		</section>
+
+		<aside>
+			<p>Crear un "asistente" que pida los siguientes datos de un producto:</p>
+			<ul>
+				<li>Nombre</li>
+				<li>Stock</li>
+				<li>Precio</li>
+				<li>Disponibilidad</li>
+			</ul>
+			<p>Validar que cada dato ingresado resulte "correcto" según su naturaleza.</p>
+			<p>Mostrar un mensaje en el <code>&lt;article&gt;</code> que indique el cuanto valen y cuantas unidades hay de ese producto.</p>
+			<article>
+
+			</article>
+		</aside>
+
+		<script>
+
+		//Tipos de datos "primitivos"
+
+/*
+			var nombre = "Computadora Bangho"; DATO DE TIPO STRING (O CADENA DE CARACTERES) Información alfanumérica > va entre comillas simples o dobles
+			var stock = 100;  DATO INT O (INTEGER) Todo lo que no es data alfanumérica es sin comillas
+			var precio = 39999.99  FLOAT > Los decimales se expresan con punto, no se separan los miles
+			var disponible = true BOOL / BOOLEANOS > True o false */
+
+			/*Interpretar los datos segun su origen: determinados e indeterminados
+			DATOS DE O. DETERMINADO (HARDCODEADO) > LO DEJE FIJO EN EL CODIGO Y NO HAY FORMA DE CAMBIARLO
+
+			DATOS DE O. INDETERMINADO:
+			> DETERMINABLES LUEGO DE UNA OPERACIÓN LÓGICO-MATEMÁTICA */
+			var precioFinal = precio * 1.21
+
+			
+		/*	> DETERMINABLE LUEGO DE UNA OPERACIÓN DE USUARIO
+			var usuario = prompt ("Quien es usted?") //comando bloqueante, en caso de que se ejecute, todo el codigo que se encuentra debajo de esta instruccion, no se ejecuta hasta q termine la operacion
+
+			*/
+
+			var nombre = prompt("Ingrese nombre:")
+			var stock = prompt("Ingrese stock:")
+			var precio = prompt("Ingrese precio:")
+			var disponible = confirm("Está disponible para la venta?")
+
+
+
+			/* VARIABLE FUERTEMENTE TIPADO
+			EJ. string nombre (se pone el tipo de variable en lugar de "var") NO ES EN JS
+			VARIABLE DEBILMENTE TIPADA */
+
+		/* No pueden empezar con número
+		var Up_1 es distinta a var up_1
+		var $una_variable_increible = 12*/
+		</script>
+	</body>
+</html>
