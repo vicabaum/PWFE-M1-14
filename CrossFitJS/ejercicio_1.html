@@ -68,7 +68,45 @@
 			var precio = prompt("Ingrese precio:")
 			var disponible = confirm("Está disponible para la venta?")
 
+			/* if ( CONDICION ) {
+				//Hacer esto...
 
+			} 
+
+			if ( NO ES UN NUM || && stock < 0) {
+				alert("¡ERROR! Ingrese un stock válido")
+			}
+
+			isNaN >> IS NOT A NUMBER
+
+			if ( isNaN == true || && stock < 0) {
+				alert("¡ERROR! Ingrese un stock válido")
+			}
+
+			console.log("Hay " + stock + " unid. de " + nombre + " que valen USD" + precio + " c/u")
+
+			*/
+
+			if ( nombre == "" || nombre == null || nombre == undefined ) {
+				alert("¡ERROR! El nombre no puede quedar vacío ò_ó")
+			}
+
+			if ( isNaN (stock) || stock < 0) {
+				alert("¡ERROR! Ingrese un stock válido")
+			}
+
+			if ( isNaN (precio) || precio <= 0 || precio > 1000 ) {
+				alert("ERROR! Ingrese un precio entre $1 y $1000 (sólo números)")
+			}
+
+			if ( disponible == undefined ) {
+				alert("¡ERROR! Indique si esta disponible")
+			}
+
+
+	//			console.log("Hay " + stock + " unid. de " + nombre + " que valen USD" + precio + " c/u")
+
+			document.querySelector("article").innerText= "Hay" + stock + "unid. de" + nombre + "que valen USD" + precio + "c/u";
 
 			/* VARIABLE FUERTEMENTE TIPADO
 			EJ. string nombre (se pone el tipo de variable en lugar de "var") NO ES EN JS

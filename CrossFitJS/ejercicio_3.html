@@ -24,6 +24,9 @@
 		<section>
 			<h1>Calcular IVA</h1>
 			<input id="precio" type="number" placeholder="Colocar valor">
+		
+		<!-- -->
+
 			<p class="mensaje">El precio con IVA es de ar$<span class="total">0</span></p>
 		</section>
 
@@ -34,12 +37,49 @@
 
 		<script>
 			function calcularIVA(){
+
 				/* 1) seleccionar el campo numérico y guardarlo en una variable */
+				
+				var precio = document.getElementById('precio')	
+
+				/* var precio = document.getElementById('precio').value >> ejercicio como lo hizo rodri (TODO EN UN UNICO PASO)*/
 
 				/* 2) obtener el valor del campo */
+		
+				var valor = precio.value
 
 				/* 3) escribir en el span el valor del campo + IVA */
+
+				var span = document.querySelector('.total')
+
+				span.innerText = valor * 1.21
+
+
+				/* 
+				ESTO SERIA UNA MANIPULACION DIRECTA (LE ESTA DANDO TODAS LAS ORDENES)
+				document.querySelector('.total')innerText = " " + valor * 1.21 
+				document.querySelector('.total')innerHTML = " " + valor * 1.21 */
 			}
+
+		/*
+		APUNTES DE CLASE 25/11:
+
+		Propiedad value: si hago una transpolacion a la inversa seria un atributo en HTML
+		Es un atributo válido (valga la redundancia) Se usa cuando queremos hacer un trabajo por encima del usuario, por ej si le asigno "8383" al ejecutar en la consola > document.getElementById('precio'.value) < la consola arrojará "8383".
+
+
+		SI USAS: document.getElementsByClassName('total');
+		HTMLCollection: expresion que es toda una caja con toda la coleccion (array, arreglo, vector) guardar cada elemento en posiciones.
+
+		TODO CODIGO QUE ESTA DENTRO DE UNA FUNCION ESTA INHERTE HASTA QUE SE DE UNA ORDEN PARA QUE SE EJECUTE.
+
+
+
+
+
+		*/
+
+
 		</script>
 	</body>
 </html>

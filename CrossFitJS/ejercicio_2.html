@@ -29,20 +29,90 @@
 			<p>Modificar el texto del titular utilizando javascript</p>
 		</aside>
 
+
 		<script>
+
 			/* 1) Seleccionar el h1 y guardarlo en una variable */
 
+			var titulo = document.querySelector("h1")
+
 			/* 2) Modificar el texto interno de esta variable */
+
+			titulo.innerText = "Hola desde el bloque 'script' del documento"
+
+			/*titulo.innerText = "Hola desde el bloque 'script' del documento"
+			titulo.innerText = "Hola desde el bloque \"script\" del documento"
+			titulo.innerText = `Hola desde el bloque \"script\" del documento`
+			titulo.innerText = `Hola desde ${variable_loca} el bloque \"script\" del documento`*/
 
 			/* 3) Una vez que funcione, probar poniendo el <script> en el <head> para corroborar que JavaScript se ejecuta secuencialmente! */
 
 			// EXTRA: Explicacion de Manipulaciones
 
-			/* 1) Manipulacion de Contenido */
+			/* 1) Manipulacion de Contenido: Todos aquellos comandos que me permiten cambiar, ampliar o remplazar el contenido de la etiqueta */
 
-			/* 2) Manipulacion de Estructura */
+			//buscar etiqueta para ANEXAR otros contenidos.
+			//carrusel de ml el profe lo haria con animated css o canvas
+			//nunca hacer refresh
 
-			/* 3) Manipulacion de Comportamiento */
+			//titulo.innerText = "Estoy manipulando el contenido del h1"
+			titulo.innerHTML = "Estoy <em>manipulando</em> el contenido del h1"
+
+			/* 2) Manipulacion de Estructura: es lo opuesto a la de contenido. Manipular todo lo relativo a la etiqueta en si mismo y no a su contenido
+			LO QUE EN HTML SE LLAMA ATRIBUTO, JS LO LLAMA PROPIEDAD. EJ: "PROPIEDAD STYLE" */
+			
+			//titulo.style.color = "red"
+			//titulo.style.backgroundColor = "pink"
+
+			//titulo.classList.add("fulanito") (PARA AGREGAR UNA CLASE// CLASSNAME PARA AGREGAR SOLO UNO Y REMPLAZARLO)
+
+			
+﻿
+			/*titulo.classList.add("fulanito")
+			undefined
+			titulo.classList.add("alerta")
+			undefined
+			titulo.classList.remove("fulanito")*/
+
+			titulo.title = "Qué copado esto, ¿no?" //TOOLTIP
+
+
+			/* 3) Manipulacion de Comportamiento:  */
+
+			//titulo.addEventListener("click", modificarTitulo)
+			//titulo.removeEventListener("click", modificarTitulo)
+
+			titulo.onclick = modificarTitulo
+
+			function modificarTitulo() {
+				
+				/* Inicio de modificarTitulo */
+
+				/* 1) MANIPULACION DEL CONTENIDO */
+
+				titulo.innerHTML = "Estoy <em>manipulando</em> el contenido del h1"
+
+				/* 1) MANIPULACION DE ESTRUCTURA */
+
+				//titulo.style.color = "red"
+				//titulo.style.backgroundColor = "pink"
+
+
+				titulo.classList.add("alerta")
+
+				/* Fin de modificarTitulo */
+
+			}
+			//TODO LO QUE ES EVENTOS EMPIEZA CON "ON"
+			//a los eventos se le agregan FUNCIONES: BLOQUES DE CODIGO QUE SE AISLAN CON INSTRUCCIONES INDEPENDIENTES, SE DEBEN DENOMINAR DE ACUERDO A LA FUNCION QUE CUMPLEN.
+			
+			/* FUNCIONES PARA EJECTUTAR COMO PARTE DEL PROCESO (PRIMERO HACE UNA COSA, LUEGO OTRA, Y ASI)
+			FUNCIONES PARA LOS EVENTOS (PARA QUE REACCIONEN LUEGO DE QUE PASE ESO, POR EJEMPLO LUEGO DE UN CLIC) >> SOLO LES ASIGNAMOS EL NOMBRE (O FIRMA, COMO SE DICE) Y NO LE PONEMOS LOS PARENTESIS.
+			LAS DOS SE ESCRIBEN IGUALES */
+
+
+
+			//LOS PRIMEROS DOS PUNTOS (1 Y 2) ES LO MISMO QUE MAQUETAR EN JS. TIENEN SENTIDO SI YO LAS COMBINO CON LAS DE COMPORTAMIENTO, TIENE SENTIDO SI SON REACTIVAS (REACCIONAN A UN COMPORTAMIENTO, CAMBIAN UN CONTENIDO O UNA ESTETICA)
 		</script>
 	</body>
 </html>

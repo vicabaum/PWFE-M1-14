@@ -35,18 +35,54 @@
 		</aside>
 
 		<script>
+
+
+			/* function calcularIVA(evento){
+			console.log ( evento )
+
+			}*/
 			function calcularIVA(){
 				/* 1) Seleccionar el campo numérico y guardarlo en una variable */
 
+				var precio = document.getElementById('precio')
+
 				/* 2) Obtener el valor del campo */
+
+				var valor = precio.value * 1.21
 
 				/* 3) Escribir en el span el valor del campo + IVA */
 
+				document.querySelector('.total').innerText = valor
+
 				/* 4) Si el valor con iva es superior a 100 asignar la clase "alerta" al mensaje, si es menor entonces quitarla */
+
+				if( valor > 100) {
+					document.querySelector(".mensaje").classList.add("alerta")
+				} else {
+					document.querySelector(".mensaje").classList.remove("alerta")
+				}
+
+
 			}
 			/* 5) seleccionar el boton y guardarlo en una variable */
 
+			var btn = document.querySelector("calcular")
+
 			/* 6) asignar al click del boton la funcion calcularIVA */
+
+			//btn.onclick = calcularIVA
+
+			btn.addEventListener("click", calcularIVA)
+
+			CAPITULO 5 DE ARKAITZ GARRO
+
+			// SI ESTAS EN LA CONSOLA, EN EL APARTADO "ELEMENTS" Y TOCAS "ESC" PODES VER LAS TRES COSAS (CONSOLA,)
+
+			//developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener
+
+			//easydb.io (base de datos en un solo click > para node.js)
 		</script>
 	</body>
 </html>
+
+

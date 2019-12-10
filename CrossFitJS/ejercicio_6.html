@@ -21,6 +21,9 @@
 			</nav>
 		</header>
 
+		 ^ NAME CUMPLE LA MISMA FUNCION QUE EL ATRIBUTO ID EN ESTE CASO
+		 COMPLEMENTAR CON LECTURA DEL LIBRO AZUL DE HTML EN LA PARTE DE FORMULARIOS
+
 		<section>
 			<h1>Validación de email</h1>
 			<p><label>Email:</label> <input name="email" type="email"></p>
@@ -36,12 +39,38 @@
 		<script>
 			/* 1) Seleccionar los campos por nombre utilizando la sintaxis CSS */
 
+			var email1 = document.querySelector('input[name="email"]')
+
+			var email2 = document.querySelector('input[name="email2"]')
+
 			/* 2) Asignar la funcion validarEmail al evento correspondiente */
 
+			
+			email2.onblur = validarEmail
+
 			function validarEmail(){
+				//alert("Vamo a validá el mail") >> pa probarlo en la consola y ver que coincidan los valores
 
 				/* 3) Si coinciden los valores, asignar la clase "ok", Sino... asignar la clase "error" */
+
+
+				if( email1.value == email2.value ) {
+
+
+					//email2.classList.add("ok")
+					email2.className = "ok"
+
+				} else {
+
+					email2.className = "error"
+					//email2.classList.add("error")
+
+				}
 			}
+
+			// if(!email1.value) >> para hacer todo por la negativa.
+
+
 		</script>
 	</body>
 </html>

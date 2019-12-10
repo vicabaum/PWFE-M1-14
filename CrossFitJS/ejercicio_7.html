@@ -60,19 +60,87 @@
 		<script>
 			/* 1) Seleccionar todas las habitaciones */
 
-			/* 2) Seleccionar el select */
+			let habitaciones = document.querySelectorAll(".habitacion")
+
+			/* 2) Seleccionar el select (el menu) */
+
+			let menu = document.querySelector("select[name=habitacion]")
 
 			/* 3) Asignar la funcion mostrarOpcion al evento correspondiente */
 
+			menu.onchange = mostrarOpcion
+
 			/* 4) Pensar una solucion logica para esconder todas las habitaciones cada vez que sea necesario */
 
+			//habitaciones[0].classList.add("esconder")
+			//habitaciones[1].classList.add("esconder")
+			//habitaciones[2].classList.add("esconder")
+
+			/*for(CONTADOR; CONDICION; SECUENCIA)	{
+
+			}
+
+			for(var i = 0; i < habitaciones.length; i = i + 1 o i++ / i = i - 1 o 1--)	{
+				
+			}
+
+*/			//debugger
+
+			window.onload = esconderTodo //es un evento que se ejecuta cuando se descarga el ultimo bit del ultimo recurso de html
+			
+			function esconderTodo(){
+
+				for(let i = 0; i < habitaciones.length; i++){
+				habitaciones[i].classList.add("esconder")
+
+				}
+			}
+
+
 			function mostrarOpcion(){
+
+				esconderTodo() // <-- Callback
+
 				/* 5) Obtener la opción seleccionada */
 
-				/* 6) Seleccionar la habitación correspondiente usando un selector dinámico */
+			let opcion = menu.value	
 
-				/* 7) Asignar la clase correspondiente */
+			/*if(opcion ==0){
+				return
 			}
+
+			//cuando un IF hace una sola cosa, se pueden omitir las llaves y borrar los espacios */
+
+			if(opcion==0) return
+
+			console.log(`Usted ha elegido la opcion: ${opcion}`)
+			
+			//console.log("Usted ha elegido la opcion: " + opcion) 
+
+				/*	6) Seleccionar la habitación correspondiente usando un selector dinámico */
+			
+			let elegida = document.querySelector(`.habitacion-${opcion}`)
+
+			console.log(elegida)
+
+				/* 7) Remover la clase correspondiente */
+
+			elegida.classList.remove("esconder")
+
+			}
+
+			/* epochconverter.com
+
+			diferencia entre var y let: js invento el var.
+
+			El objeto WINDOW tiene toda la informacion del html y tambien del browser
+
+			LAS FUNCIONES CUMPLEN LA FUNCION (VALGA LA REDUNDANCIA) DE RECICLAR EL CODIGO */
+
+			
 		</script>
 	</body>
 </html>
+
+RETURN SIRVE PARA DEVOLVER UN VALOR O PARA SALIR DE UNA FUNCION/CORTAR UNA EJECUCION
+

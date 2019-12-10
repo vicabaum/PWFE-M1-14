@@ -1,0 +1,77 @@
+/* JSON aparece posterior a XML que resultaba ser el lenguaje más utilizado. 
+XML formato en en cual los sitemas puedan intercambiar informacion sin importar en que lenguaje 
+estuvieran hechos los sistemas. El "problema" es que es un lenguaje "hermano" de HTML que estaba 
+basado en etiquetas, paras las primeras estructuras funcionó bien
+COMPUTACION DISTRIBUIDA --> Comenzó con XML
+Estandar mas utilizado en XML es SOAP
+Lenguaje COWOL -> lenguaje mas utilizado en los bancos. 
+
+JASON aparece para crear un formato más ligero de transferir los datos, se usa la misma tecnologia web: 
+el protocolo HTTP.
+
+AJAX -> sigue siendo el protocolo HTTP de base. Es un antes y un despues en JS, hasta antes de su aparicion era 
+medio una verguenza programar en JS segun el prof :p
+Acronimo de ASINCRONO DE JS Y XML.
+¿Que? Es una TECNICA de como crear aplicaciones interactivas o RIA Ej de RIAS: Dropbox, Spotify. 
+La posibilidad de que la info se actualice en forma real sin necesidad de refrescar la pagina.
+AJAX es por ejemplo que se te abran chats en una red social, que se te actualicen posteos o el scroll infinito del feed, etc.
+
+
+LEEEEER -> LIBRO DE INTRODUCCIONES A LAS TECNOLOGIAS WEB (para entender mejor toda esta shit)
+
+XMLHttpRequest -> "Robotito" Objeto de JS encargado de poder crear la pieza que se conecta al recurso, obteniene los datos, los procesa y les da un uso que nos interese.
+
+V8 JavaScript engine (INVESTIGAR) -> Es el motor que interpreta JS. Esto es el corazon de Node.js (Inventaron el JS del lado del servidor.)
+
+MongoDB -> Las bases de dato no sql, solo almacenan "documentos de datos" y el procesamiento lo hace el lenguaje
+
+TODO ESTO SURGIO A PARTIR DE AJAX.
+
+AJAX -> Que nos sirva para aprender cómo funciona un navegador.
+
+PRIMERA PARTE -> Tengo que programar que recurso va a obtener y cómo va a obtenerlo
+SEGUNDA PARTE -> CUANDO ESTÉ Y CUANDO NO
+
+CHEQUEAR DESPUES "HTTP STATUS CODE" -> LO PUSE EN FAVS DE PROGRAMETA (L)
+PESTAÑA NETWORK EN CHROME O RED EN MOZILLA (DE EL INSPECTOR DE CODIGO) >>> MUESTRA TODOS LOS RECURSOS QUE SON SOLICITADOS Y DESCARGADOS HACIA EL NAVEGADOR - TAMBIEN SE PUEDEN FILTRAR LOS RECURSOS QUE QUEREMOS VER
+
+INVESTIGAR SOBRE CACHÉ
+INVESTIGAR SOBRE SERVIDORESBßbBß
+
+
+
+HAY QUE EMULAR EL ENTORNO QUE VA A TENER EL ENTORNO > TRABAJAR EN LO QUE SE CONOCE COMO LOCALHOST > 
+
+
+
+
+
+
+*/
+
+[
+	{
+        "titulo" : "La tecnología llega a la actual edición de la Libertadores",
+        "autor" : "Joaquín Angeli",
+        "detalle" : "La Conmebol anunció la implementación del sistema VAR (asistencia arbitral por video) desde las semifinales de la actual Libertadores.",
+        "imagen" : "sorteo-libertadores.jpg"
+    },
+    {
+        "titulo" : "Comenzó la venta de entradas para el Mundial de Rusia 2018",
+        "autor" : "Laura Smasnatta",
+        "detalle" : "Hoy se abrió la venta al público de tickets, a través del sitio oficial de la FIFA. El proceso se dividirá en dos partes y los espectadores deberán solicitar una tarjeta de hincha 'Fan ID'",
+        "imagen" : "tickets-rusia-mundial.jpg"
+    },
+    {
+        "titulo" : "A 94 años del derechazo que convirtió en leyenda a Luis Ángel Firpo",
+        "autor" : "Diego Di Marco",
+        "detalle" : "El 14/9/1923 el boxeador argentino enfrento en Nueva York a Jack Dempsey, uno de los mejores pesos pesados de la historia.",
+        "imagen" : "firpo.jpg"
+    },
+    {
+        "titulo" : "Buenos Aires 2018 presentó su innovador proyecto de parques y de ceremonia inaugural ante el COI",
+        "autor" : "Melina Morales",
+        "detalle" : "El Comité Organizador de los Juegos de la Juventud presentó su concepto de parques ante la 131a sesión del Comité Olímpico Internacional (COI) que se realizó en Lima. La ceremonia inaugural se realizará al aire libre.",
+        "imagen" : "buenos-aires.jpg"
+    }
+]
